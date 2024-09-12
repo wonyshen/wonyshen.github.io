@@ -1,10 +1,213 @@
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="en">
 
-    </head>
-    <body>
-        <h1>
-            this is portfolio
-        </h1>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nathan Davis - Graphic Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body class="">
+    <!-- Navbar -->
+    <header class="text-white fixed top-10 right-0 md:top-0 md:right-10 z-50 flex flex-col w-full">
+        <div class="ml-auto px-4 py-2 w-40 sm:w-52 sm:mr-10 flex bg-red items-center z-50">
+            <!-- Hamburger menu -->
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <img src="images/logo.svg" alt="Logo" class="hidden md:block ml-10">
+            <img src="images/logo-mobile.svg" alt="Logo" class="md:hidden ml-10">
+        </div>
+        <div class="menu ml-auto px-4 py-4 w-40 sm:w-52 sm:mr-10 bg-red items-center hidden" id="menu">
+            <a href="index.html" class="block px-4 py-2 text-white-900 border-b border-white">Home</a>
+            <a href="portfolio.html" class="block px-4 py-2 text-white-900 border-b border-white">Past Work</a>
+            <a href="about.html" class="block px-4 py-2 text-white-900 border-b border-white">About</a>
+            <a href="contact.html" class="block px-4 py-3 text-white-900 border-b border-white">Contact</a>
+            <a href="service.html" class="block px-4 py-3 text-white-900">Service</a>
+
+        </div>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hidden md:block relative h-screen bg-cover bg-center"
+        style="background-image: url('images/home-hero.png')">
+        <div class="absolute inset-0 bg-black opacity-30"></div>
+        <div class="container mx-auto relative z-10 flex items-start justify-start h-full px-4">
+            <div class="text-left">
+                <img src="images/logo-large.png" width="400" alt="" srcset="">
+                <p class="my-3 text-white w-1/2 md:text-left">Graphic designer and marketer from Vancouver, BC
+                    that blends creativity with a business edge.Drawing from my
+                    experience at a NYC venture capital firm and BCIT's BBA program, I specialize in crafting visually
+                    compelling solutions
+                    grounded in strategic research. Usually finding myself working in the Food and Beverage industry, I
+                    thrive in leading
+                    advertising campaigns, developing branding materials and improving user experiences. As a
+                    multidisciplinary designer, I
+                    look forward to exploring new industries and creative mediums.
+                </p>
+                <div class="button-container">
+                    <button class="button"><a href="#contact">Contact Me</a></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- hero mobile -->
+    <section class="md:hidden pt-20">
+        <h1 class="text-3xl font-bold text-left ml-4">Hello, I am</h1>
+        <div class="relative bg-cover  bg-center" style="background-image: url('images/home-hero.png')">
+            <div class="absolute inset-0 bg-black opacity-30"></div>
+            <div class="container mx-auto relative z-10 flex items-center justify-center h-full px-4">
+                <div class="text-center">
+                    <img src="images/logo-large.png" class="ml-4 h-3/4 w-3/4" alt="" srcset="">
+                </div>
+            </div>
+        </div>
+        <div class="container px-4">
+            <p class="my-4 text-black md:max-w-md">Nathan Davies, a <strong>graphic designer and marketer</strong> from
+                Vancouver, BC that blends
+                creativity
+                with a business edge. Drawing from my
+                experience at a <strong>NYC venture capital firm</strong> and <strong>BCIT's BBA program</strong>, I
+                specialize in crafting <strong> visually compelling solutions</strong>
+                grounded in <strong>strategic research.</strong></p>
+            <div class="button-container">
+                <button class="button"><a href="#contact">Contact Me</a></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos We Create Section -->
+    <section class="bg-white py-16">
+        <div class="container mx-auto px-4 text-center">
+            <h3 class="text-4xl md:text-3xl lg:text-2xl font-bold text-left">Videos We Create</h3>
+            <div class="flex flex-col-reverse md:flex-row justify-between">
+
+                <div class="md:w-1/2 w-full text-center md:text-left">
+                    <p class="mt-4">I specialize in video production that allows companies to connect directly with
+                        their audience through effective and creative storytelling. My goal is to collaborate and work
+                        towards
+                        the best possible outcome by utilizing all my skill on your behalf.</p>
+                    <p class="mb-5">So let's create something together.</p>
+                    <div class="button-container">
+                        <button class="button">
+                            <a href="portfolio.html">View Past Work</a>
+                        </button>
+                    </div>
+                </div>
+                <div class="mt-4 flex justify-center md:justify-end">
+                    <video src="images/sample.mp4" controls class="w-3/4 mx-auto md:mx-0"></video>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services We Provide Section -->
+    <section class="bg-white-50 py-16">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center">Services We Provide</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Card 1 -->
+                <div class="bg-gray-3 p-2 col-span-2 flex flex-col">
+                    <div class="flex-end flex justify-between">
+                        <h2 class="text-md font-bold mb-2">Videography</h2>
+                        <img src="images/service-1.png" class="w-1/2 md:w-auto" alt="" srcset="">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mt-8">Promotional Videos</h3>
+                        <p class="w-full">Implemented new creative process for grass-fed dairy brand for weekly social
+                            media videos.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-gray-3 p-2 col-span-2 md:col-span-1 flex flex-col">
+                    <div class="flex-end flex justify-between">
+                        <h2 class="text-md font-bold mb-2">Videography</h2>
+                        <img src="images/service-2.png" class="w-1/2 md:w-auto" alt="" srcset="">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mt-8">Event Media</h3>
+                        <p>Capturing life as it happens.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-gray-3 p-2 col-span-2 md:col-span-1 flex flex-col ">
+                    <div class="flex-end flex justify-between">
+                        <h2 class="text-md font-bold mb-2">Design</h2>
+                        <img src="images/service-3.png" class="w-1/2 md:w-auto" alt="" srcset="">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mt-8">Short-form Videos</h3>
+                        <p>Reaching new audiences.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-gray-3 p-6 col-span-2 flex flex-col">
+                    <div class="flex-end flex justify-between">
+                        <h2 class="text-md font-bold mb-2">Advertising</h2>
+                        <img src="images/service-4.png" class="w-1/2 md:w-auto" alt="" srcset="">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mt-8">Brand Documentaries</h3>
+                        <p class="w-3/4 md:w-1/2">Capturing the essence of your brand, highlighting its values, using
+                            storytelling to connect
+                            with your target audience.</p>
+                    </div>
+
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-gray-3 p-2 col-span-2 flex flex-col">
+                    <div class="flex-end flex justify-between">
+                        <h2 class="text-md font-bold mb-2">Advertising</h2>
+                        <img src="images/service-5.png" class="w-1/2 md:w-auto" alt="" srcset="">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mt-8">Marketing Management</h3>
+                        <p>Wearing different hats to go from concept to finished product.</p>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-gray-3 p-2 col-span-2 md:col-span-1 flex flex-col">
+                    <div class="flex-end flex justify-between">
+                        <h2 class="text-md font-bold mb-2">Design</h2>
+                        <img src="images/service-6.png" class="w-1/2 md:w-auto" alt="" srcset="">
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mt-8">Graphic Design</h3>
+                        <p>Visual Communication</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-3 text-black py-6">
+        <div class="container mx-auto text-center">
+            <div class="md:flex md:justify-start">
+                <p class="md:mr-4">hello@natthandavis.com</p>
+            </div>
+            <p class="md:text-left">Nathan Davis 2024</p>
+            <p>Built by <a href="https://github.com/adeife16" target="_blank"><strong>adecoder</strong></a></p>
+        </div>
+    </footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
 </html>
