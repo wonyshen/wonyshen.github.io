@@ -24,7 +24,6 @@
             <img src="images/logo-mobile.svg" alt="Logo" class="md:hidden ml-10">
         </div>
         <div class="menu ml-auto px-4 py-4 w-40 sm:w-52 sm:mr-10 bg-red items-center hidden" id="menu">
-            <a href="index.html" class="block px-4 py-2 text-white-900 border-b border-white">Home</a>
             <a href="portfolio.html" class="block px-4 py-2 text-white-900 border-b border-white">Past Work</a>
             <a href="about.html" class="block px-4 py-2 text-white-900 border-b border-white">About</a>
             <a href="contact.html" class="block px-4 py-3 text-white-900 border-b border-white">Contact</a>
@@ -57,22 +56,22 @@
                 </div>
             </div>
             <div class="p-6 md:w-2/3 w-full">
-                <ul class="flex">
-                    <li class="z-40 bg-gray-3" id="tab1" onclick="openTab(1)">
-                        <a href="#" class="inline-block py-2 px-4 font-semibold text-black-700">
+                <ul class="flex contact-tab">
+                    <li class="z-40 bg-gray-2" id="tab1" onclick="openTab(1)">
+                        <a href="#" class="inline-block py-2 px-4 font-semibold text-black-700 serif">
                             Project Request
                         </a>
                     </li>
                     <li class="z-40 bg-gray-3" id="tab2" onclick="openTab(2)">
-                        <a href="#" class="inline-block py-2 px-4 font-semibold text-black-500">
+                        <a href="#" class="inline-block py-2 px-4 font-semibold text-black-500 serif">
                             General Inquiry
                         </a>
                     </li>
                 </ul>
-                <div class="w-full bg-gray-2 py-6 px-0 md:px-4">
+                <div class="w-full py-6 px-0 md:px-4" id="content-div">
                     <div id="content1" class="block bg-white md:bg-transparent">
                         <div>
-                            <form class="mt-4">
+                            <form class="mt-4" action="submit.php" method="post">
                                 <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
                                     <!-- First row, first column -->
                                     <div class="flex flex-col">
@@ -90,7 +89,7 @@
                                     <!-- Second row, first column -->
                                     <div class="flex flex-col">
                                         <label for="company-website" class="block">Company Website</label>
-                                        <input type="url" id="company-website" name="company-website"
+                                        <input type="url" id="company-website" name="company"
                                             class="border rounded-md p-2 w-full">
                                     </div>
 
@@ -274,8 +273,10 @@
                                         <label for="robot-check">I am not a robot, or a really cool one.</label>
                                     </div>
                                 </div>
-                                <div class="button-container">
-                                    <button type="submit" class="button">Submit</button>
+                                <div class="my-4 w-full flex justify-end">
+                                    <div class="button-container">
+                                        <button type="submit" class="button float-right">Submit</button>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -484,8 +485,10 @@
                                         <label for="robot-check">I am not a robot, or a really cool one.</label>
                                     </div>
                                 </div>
-                                <div class="button-container">
-                                    <button type="button" class="button">Submit</button>
+                                <div class="my-4 w-full flex justify-end">
+                                    <div class="button-container">
+                                        <button type="submit" class="button">Submit</button>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -521,13 +524,14 @@
             const contents = ['content1', 'content2'];
             const tabs = ['tab1', 'tab2'];
 
-            const activeClasses = 'bg-gray-2 text-black-700 text-2xl tab-open';
-            const inactiveClasses = 'text-black bg-gray-3 text-sm';
+            const activeClasses = 'text-black-700 text-2xl tab-open';
+            const inactiveClasses = 'text-black text-sm';
 
             // Loop through tabs and content divs to reset them
             contents.forEach((contentId, index) => {
                 // Hide all contents
                 document.getElementById(contentId).classList.add('hidden');
+
                 // Reset tabs to inactive state
                 const tab = document.getElementById(tabs[index]).children[0];
                 tab.classList.remove(...activeClasses.split(" "));
@@ -541,6 +545,16 @@
             const activeTab = document.getElementById('tab' + tabNumber).children[0];
             activeTab.classList.remove(...inactiveClasses.split(" "));
             activeTab.classList.add(...activeClasses.split(" "));
+
+            if (document.getElementById('content1').classList.contains('hidden')) {
+                document.getElementById("content-div").classList.remove('bg-gray-2');
+                document.getElementById("content-div").classList.add('bg-gray-3');
+            }
+
+            if (document.getElementById('content2').classList.contains('hidden')) {
+                document.getElementById("content-div").classList.remove('bg-gray-3');
+                document.getElementById("content-div").classList.add('bg-gray-2');
+            }
         }
 
         // Initialize by opening the first tab

@@ -1,0 +1,173 @@
+.dashboard {
+    
+}
+
+.dashboard .back {
+    position: absolute;
+    width: 100%;
+}
+
+.dashboard .logo-wrapper{
+    position: absolute;
+    width: 60%;
+    height: 80%;
+}
+
+.dashboard .logo-wrapper .sticker{
+    left: 20px;
+    position: absolute;
+    height: 100%;
+}
+
+.dashboard .logo-wrapper .name{
+    position: relative;
+    left: 60px;
+}
+
+.dashboard .logo-wrapper .bio{
+    position: relative;
+    margin-left: 70px;
+    color: white;
+}
+
+.dashboard .logo-wrapper .contact{
+    position: relative;
+    margin-left: 70px;
+    margin-top: 20px;
+}
+
+.btn_submit {
+    cursor: pointer;
+    padding: 20px 60px;
+    font-size: 16px;
+    font-weight: 325;
+    line-height: 19px;
+    letter-spacing: 0.12em;
+    color: #FFF;
+    background-color: #FF0000;
+    border: none;
+    position: relative;
+    z-index: 10;
+    font-size: 25px;
+    font-family: 'sans serif';
+}
+
+.btn_submit::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: -12px;
+    width: 106%;
+    height: 100%;
+    background-image: url('../images/button_outline.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    z-index: 2;
+}
+
+.fixed_menu {
+    position: fixed;
+    top: 0px;
+    right: 50px;
+    z-index: 999;
+}
+
+.custom-dropdown .dropdown-toggle {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.custom-dropdown .dropdown-toggle:hover,
+.custom-dropdown .dropdown-toggle:focus {
+    background-color: #cc0000;
+}
+
+.custom-dropdown .dropdown-menu {
+    background-color: #ff0000;
+    border: none;
+    border-radius: 0.25rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.custom-dropdown .dropdown-menu a {
+    color: white;
+}
+
+.custom-dropdown .dropdown-menu a:hover,
+.custom-dropdown .dropdown-menu a:focus {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+.custom-dropdown .divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    margin: 0px;
+}
+
+.three-dots {
+    margin: 10px;
+    font-size: 20px;
+    width: 40px;
+}
+
+.font-italic {
+    font-style: italic;
+}
+.font-normal {
+    font-style: normal;
+}
+.row-gray {
+    background-color : #eeeeee;
+}
+
+.video-block {
+    display: flex;
+    float: right;
+}
+.myRow {
+    padding: 50px;
+}
+.section-title {
+    margin-bottom: 30px;
+}
+.mb-20 {
+    margin-bottom: 20px;
+}
+.brown {
+    background-color: #F4F1E6;
+    padding: 10px;
+    overflow: auto;
+    min-height: 240px;
+}
+
+.my-block {
+    padding: 0px 5px;
+    margin-bottom: 20px;
+}
+.block-image {
+    float: right;
+    width: 44%;
+}
+.block-title {
+    margin-top: 100px;
+    font-size: 20px;
+}
+.block-content {
+    left: 20px;
+}
+
+
+
+.returnbtn {
+    color: black;
+    font-size: 20px;
+}
+.gray { 
+    background-color: #F8F8F2;
+}
+.about_section {
+    
+    padding: 20px;
+}
